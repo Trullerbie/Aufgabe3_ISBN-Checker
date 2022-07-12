@@ -1,32 +1,24 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/checkisbn.js":
+var __webpack_exports__ = {};
 /*!**************************!*\
   !*** ./src/checkisbn.js ***!
   \**************************/
-/***/ (() => {
+//Aufgabe a
+const button = document.getElementById("knopf");
+const input = document.getElementById("input");
+const validation = document.getElementById("validation");
+button.addEventListener("click", checkISBN);
 
-eval("//Aufgabe a\r\nconst checkISBN = (isbn) => {\r\n    alert(\"checkISBN\");\r\n  };\n\n//# sourceURL=webpack://aufgabe3_isbn-checker/./src/checkisbn.js?");
+function checkISBN(checkSum) {
+  if (input.value[9] === checkSum) {
+    validation.innerHTML = "ISBN is valid";
+    validation.style.color = "green";
+  } else {
+    validation.innerHTML = "ISBN is invalid";
+    validation.style.color = "red";
+  }
+}
 
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/checkisbn.js"]();
-/******/ 	
 /******/ })()
 ;
+//# sourceMappingURL=main.bunde.js.map
