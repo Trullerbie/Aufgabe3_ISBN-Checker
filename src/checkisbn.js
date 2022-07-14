@@ -4,8 +4,9 @@ const checkButton = document.getElementById("checkButton");
 const inputTxt = document.getElementById("inputText");
 const validation = document.getElementById("validation");
 checkButton.addEventListener("click", checkISBN);
+//Aufgabe e
+inputTxt.addEventListener("focus", resetInfoText);
 
-//
 function checkISBN() {
   var txt = inputTxt.value;
   var checkSum = calculateISBNChecksum(txt);
@@ -41,4 +42,6 @@ module.exports = {
   calculateISBNChecksum,
 };
 
-
+function resetInfoText(){
+  validation.innerHTML = "";
+}
