@@ -1,4 +1,5 @@
 const { calculateISBNChecksum } = require("./calculateISBN");
+
 describe("calculateISBN", () => {
   it("should work", () => {
     console.log("Hallo Ansbach");
